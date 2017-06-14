@@ -1,0 +1,191 @@
+<html>
+<head>
+<title>
+Consortium of California Herbaria: Elevation Search Page
+</title>
+<Meta Name="keywords" Content="UC Berkeley Herbarium,
+California floristics, Consortium of California Herbaria, UC Santa Barbara,
+UC Irvine, UC Riverside, UC Davis, UC Santa Cruz, Santa Barbara Botanic Garden,
+Jepson Herbarium
+">
+<link href="style_consortium.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<table class="banner" width="100%" border="0">
+  <tr>
+    <td align="center">Consortium of California Herbaria</td>
+  </tr>
+  <tr>
+    <td class="bannerHerbs" align="center">
+	  <font  face="Times New Roman, Times, serif" color="#FEFEFE"><b>
+	<a href="http://ucjeps.berkeley.edu/jeps/" target="_blank" class="bannerHerbs">
+	  JEPS</a> &middot; 	
+	<a href="http://www.sbbg.org/" target="_blank" class="bannerHerbs">
+	  SBBG</a> &middot; 
+	<a href="http://www.csuchico.edu/biol/Herb/" target="_blank" class="bannerHerbs">
+	  CHSC</a> &middot; 
+	<a href="http://herbarium.ucdavis.edu/" target="_blank" class="bannerHerbs">
+	  DAV</a> &middot; 
+	<a href="http://ucjeps.berkeley.edu/consortium/irvc.html" target="_blank" class="bannerHerbs">
+	  IRVC</a> &middot; 
+	<a href="http://www.herbarium.ucr.edu/" target="_blank" class="bannerHerbs">
+	  UCR</a> &middot; 
+	<a href="http://www.lifesci.ucsb.edu/~mseweb/" target="_blank" class="bannerHerbs">
+	  UCSB</a> &middot; 
+	<a href="http://mnhc.ucsc.edu/" target="_blank" class="bannerHerbs">
+	  UCSC</a> &middot; 
+	<a href="http://ucjeps.berkeley.edu/uc/" target="_blank" class="bannerHerbs">
+	  UC</a>  &middot; 
+	<a href="http://www.rsabg.org/" target="_blank" class="bannerHerbs">
+	  RSA-POM</a> &middot; 
+	<a href="http://www2.sjsu.edu/depts/herbarium/" target="_blank" class="bannerHerbs">
+	  SJSU</a>  &middot; 
+	<a href="http://www.sdnhm.org/research/botany/" target="_blank" class="bannerHerbs">
+	  SD</a>
+	</b></font>	  
+	</td>
+  </tr>
+</table>
+
+<!-- Beginning of horizontal menu -->
+<table class=horizMenu width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="21" width="640" align="right">
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="http://ucjeps.berkeley.edu/consortium/participants.html" class="horizMenuActive">
+	    Participants</a>
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="http://ucjeps.berkeley.edu/consortium/news.html" class="horizMenuActive">News</a>
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span class="horizMenuInactive">Search</span>
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="http://ucjeps.berkeley.edu/consortium/about.html" class="horizMenuActive">About</a>
+    </td>
+	<td />
+  </tr>
+ <tr>
+    <td colspan="6" bgcolor="#9FBFFF"><img src="../common/images/common_spacer.gif" alt="" width="1" height="1" border="0" /></td>
+  </tr>
+</table>
+<!-- End of horizontal menu -->
+
+	<form method = "POST"
+	action="/cgi-bin/get_elev.pl">
+
+	<center>
+		<table cellspacing=10 width="96%">
+		<tr>
+		<td width="50%" valign="top">Elevations:<br><span class="pageSubheading">Scientific Name</span>
+<br>
+		<INPUT NAME = "taxon_name" SIZE = 50 MAXLENGTH = 255>
+<br />
+<span class="pageSubheading">County </span><span class="bodySmallerText">(1 or more; default is all counties)</span>
+<br>
+<select name="county" size = 5 multiple>
+ <option value = "" selected="selected">All</option>
+ <option value = "ALAMEDA">Alameda</option>
+ <option value = "ALPINE">Alpine</option>
+ <option value = "AMADOR">Amador</option>
+ <option value = "BUTTE">Butte</option>
+ <option value = "CALAVERAS">Calaveras</option>
+ <option value = "COLUSA">Colusa</option>
+ <option value = "CONTRA COSTA">Contra Costa</option>
+ <option value = "DEL NORTE">Del Norte</option>
+ <option value = "EL DORADO">El Dorado</option>
+ <option value = "FRESNO">Fresno</option>
+ <option value = "GLENN">Glenn</option>
+ <option value = "HUMBOLDT">Humboldt</option>
+ <option value = "IMPERIAL">Imperial</option>
+ <option value = "INYO">Inyo</option>
+ <option value = "KERN">Kern</option>
+ <option value = "KINGS">Kings</option>
+ <option value = "LAKE">Lake</option>
+ <option value = "LASSEN">Lassen</option>
+ <option value = "LOS ANGELES">Los Angeles</option>
+ <option value = "MADERA">Madera</option>
+ <option value = "MARIN">Marin</option>
+ <option value = "MARIPOSA">Mariposa</option>
+ <option value = "MENDOCINO">Mendocino</option>
+ <option value = "MERCED">Merced</option>
+ <option value = "MODOC">Modoc</option>
+ <option value = "MONO">Mono</option>
+ <option value = "MONTEREY">Monterey</option>
+ <option value = "NAPA">Napa</option>
+ <option value = "NEVADA">Nevada</option>
+ <option value = "ORANGE">Orange</option>
+ <option value = "PLACER">Placer</option>
+ <option value = "PLUMAS">Plumas</option>
+ <option value = "RIVERSIDE">Riverside</option>
+ <option value = "SACRAMENTO">Sacramento</option>
+ <option value = "SAN BENITO">San Benito</option>
+ <option value = "SAN BERNARDINO">San Bernardino</option>
+ <option value = "SAN DIEGO">San Diego</option>
+ <option value = "SAN FRANCISCO">San Francisco</option>
+ <option value = "SAN JOAQUIN">San Joaquin</option>
+ <option value = "SAN LUIS OBISPO">San Luis Obispo</option>
+ <option value = "SAN MATEO">San Mateo</option>
+ <option value = "SANTA BARBARA">Santa Barbara</option>
+ <option value = "SANTA CLARA">Santa Clara</option>
+ <option value = "SANTA CRUZ">Santa Cruz</option>
+ <option value = "SHASTA">Shasta</option>
+ <option value = "SIERRA">Sierra</option>
+ <option value = "SISKIYOU">Siskiyou</option>
+ <option value = "SOLANO">Solano</option>
+ <option value = "SONOMA">Sonoma</option>
+ <option value = "STANISLAUS">Stanislaus</option>
+ <option value = "SUTTER">Sutter</option>
+ <option value = "TEHAMA">Tehama</option>
+ <option value = "TRINITY">Trinity</option>
+ <option value = "TULARE">Tulare</option>
+ <option value = "TUOLUMNE">Tuolumne</option>
+ <option value = "VENTURA">Ventura</option>
+ <option value = "YOLO">Yolo</option>
+ <option value = "YUBA">Yuba</option>
+ <option value = "UNKNOWN">unknown</option>
+		</select>
+		<br>
+&nbsp;
+		<td width="50%" valign="top" >
+<span class="pageSubheading2"><b>Source</b> </span><span class="bodySmallerText">(1 or more; default is all sources)</span>
+<SELECT NAME="source" size=4 multiple>
+<OPTION VALUE="All" SELECTED>All sources</option>
+<OPTION VALUE="UC">UC (University Herbarium, UC Berkeley)</option>
+<OPTION VALUE="JEPS">JEPS (Jepson Herbarium, UC Berkeley)</option>
+<OPTION VALUE="UCSB">UCSB (UC Santa Barbara)</option>
+<OPTION VALUE="UCSC">UCSC (UC Santa Cruz)</option>
+<OPTION VALUE="UCI">IRVC (UC Irvine)</option>
+<OPTION VALUE="UCR">UCR (UC Riverside)</option>
+<OPTION VALUE="UCD">DAV (UC Davis)</option>
+<OPTION VALUE="SBBG">SBBG (Santa Barbara Botanic Garden)</option>
+<OPTION VALUE="CHSC">CHSC (Chico State Herbarium, CSU Chico)</option>
+<OPTION VALUE="RSA">RSA (Rancho Santa Ana Botanic Garden Herbarium)</option>
+<OPTION VALUE="POM">POM (Pomona Herbarium in RSA)</option>
+<OPTION VALUE="SD">SD (San Diego Natural History Museum)</option>
+<OPTION VALUE="SJSU">SJSU (Carl W. Sharsmith Herbarium)</option>
+</SELECT>	
+
+</td>
+          </tr>
+        </table>		</tr>
+	</table>
+
+<INPUT TYPE = "hidden" name="SO" VALUE = "9">
+	</form>
+			<input TYPE="submit" VALUE="Submit Query">&nbsp;&nbsp;&nbsp;&nbsp;			
+			<input TYPE="reset" VALUE="Reset Form">		
+<hr />
+
+	
+
+<table width="100%">
+  <tr class=banner>
+    <td height="18"><img src="../common/images/common_spacer.gif" alt="" width="1" height="1" border="0" /></td>
+  </tr>
+  <tr>
+    <td height="20"><span class="copyrightText">&nbsp;&nbsp;<a href="http://ucjeps.berkeley.edu/main/copyright.html">Copyright</a> &copy; 2006 Regents of the University of California &mdash; Updated Dec 12, 2006</span></td>
+  </tr>
+</table>
+
+</body>
+</html>

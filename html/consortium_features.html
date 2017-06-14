@@ -1,0 +1,130 @@
+<html>
+<head>
+<title>
+Consortium of California Herbaria: Technical Features
+</title>
+<Meta Name="keywords" Content="UC Berkeley Herbarium,
+California floristics, Consortium of California Herbaria, UC Santa Barbara,
+UC Irvine, UC Riverside, UC Davis, UC Santa Cruz, Santa Barbara Botanic Garden,
+Jepson Herbarium, California State University Chico, Rancho Santa Ana Botanic Garden
+">
+<link href="style_consortium.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+
+
+
+
+<!-- COMMON HEADER -->
+<?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/cch_header.php'); ?>
+<!-- COMMON HEADER ENDS -->
+
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td width="112" valign="top">
+<IMG SRC="../common/images/strips/strip_oak_woodland.jpg" alt="California oak woodland - Photo credit: John Game" width="112" height="766">
+</td>
+  <td width="15" valign="top"></td>
+
+<td valign="top">
+  <p><br />
+      <span class="pageName">Features of Consortium of California Herbaria Data View</span><br />
+      <br />
+      <span class="bodyText">
+			
+
+<h4>See also <a href="http://ucjeps.berkeley.edu/detail_help.html">help page</a> and <a href="http://ucjeps.berkeley.edu/consortium/about.html">"about" page</a></h4>
+<h3>Input</h3>
+
+<UL>
+<LI>Participant data: acceptable in any field format, converted to common Consortium format; file format xml or tab-delimited preferred
+<LI>Minimum standards: Unique herbarium specimen number, taxon name
+<LI>Transmitted by e-mail, CD, FTP, memory stick
+<LI>Updatable at any interval 
+</ul>
+
+<h3>Common Consortium format</h3>
+<UL>
+<LI>Produced by scripts constructed for each participant
+<LI>Fields accommodated:
+<table class="bodyText">
+<tr><th>Field</th><th>Searchable?</th><th>Sortable?</th></tr>
+<tr><td>Unique herbarium specimen number</td><td>*</td><td>*</td></tr>
+<tr><td>Taxon name</td><td>*</td><td>*</td></tr>
+<tr><td>Locality</td><td>*</td><td>*</td></tr>
+<tr><td>Habitat</td></td><td></tr>
+<tr><td>Macromorphology</td></td><td></tr>
+<tr><td>Notes</td></td><td></tr>
+<tr><td>Latitude</td><td>*</td></tr>
+<tr><td>Longitude</td><td>*</td></tr>
+<tr><td>Township/range/section</td><td></td></tr>
+<tr><td>Elevation (f or m)</td></td><td><td>*</td></tr>
+<tr><td>Date</td><td>*</td><td>*</td></tr>
+<tr><td>Collector</td><td>*</td><td>*</td></tr>
+<tr><td>Collector number</td><td>*</td><td>*</td></tr>
+<tr><td>County</td><td>*</td><td>*</td></tr>
+<tr><td>Annotations</td></td><td></tr>
+<tr><td>Type information</td><td></td></tr>
+</table>
+</UL>
+<h3> Restrictions/Quality Control</h3>
+<UL>
+<LI>Names not in master taxon authority file excluded;
+      Authority table updated as necessary, following consultation with IPNI, Tropicos, ICPN
+<LI>Common spelling of taxon names enforced
+<LI>Common spelling of county names enforced
+<LI>Coordinates outside California box nulled
+<LI>Dates before 1750 and after today's date nulled
+<LI>Field contents sanity checked, record skipped on mismatch 
+<LI>Elevations below Death Valley or above county max elevation nulled
+<LI>Any spelling of localities, collectors allowed
+<LI>Any synonymy allowed
+<LI>Errors, modifications reported to participant
+</UL>
+
+<h3>Data updates</h3>
+<UL>
+<li>Consortium contents completely replaced at refresh (ca. every one to two weeks)
+<li>Participant data replaced en masse (i.e., not corrected or incremented) when new data received
+</UL>
+<h3>Change tracking</h3>
+<UL>
+<LI><a href="http://ucjeps.berkeley.edu/consortium/curatorial.html">New names, changed names recorded and displayed with each data refresh</a>
+<LI> User supplied comments permanently associated with specimen number: <a href="http://ucjeps.berkeley.edu/cgi-bin/display_chc_comment.pl?comment_id=UC23520">for example, a comment on a locality</a>
+<LI> Curatorial interface for curators to manage comments on their specimens, and track which comments they have addressed 
+</UL>
+
+<h3> <a href="http://ucjeps.berkeley.edu/consortium/curatorial.html">Curatorial features</a></h3>
+<UL>
+<LI>"Heteroduplicate" specimen tracking
+<LI>Canned common searches ("related searches")
+<LI>Feedback (cumulative comments page for each participant), displayed per-record, or over current intervals.
+<LI><a href="http://ucjeps.berkeley.edu/cgi-bin/make_county_graph.pl?inst=JEPS&so=MM">Comparative graphs</a> (county vs specimen numbers per participant)
+<LI>Comparison of specimen coordinates with range specified for taxon in Jepson Manual (yellow flagging)
+</UL>
+
+<h3>Mapping</h3>
+<UL>
+<LI>Connected to BerkeleyMapper for point display
+</UL>
+
+<h3>Online constituents</h3>
+<table class="bodyText">
+<tr><td>Databases</td><td> Main file: Herbarium number -> corresponding data</td></tr>
+<tr><td>Indexes</td><td> Various: Index item -> list of Herbarium numbers</td></tr>
+<tr><td>Translation tables</td><td>taxon name <-> taxon ID nomenclatural synonyms</td></tr>
+<tr><td>Link tables</td><td> specimen number -> external links (e.g., specimen scan, fieldbook entry, collector biography, user comments)</td></tr>
+<tr><td>CGI scripts</td><td>searching; commenting</td></tr>
+<tr><td>Static web pages</td><td>Search form; administrative pages; graphs</td></tr
+</table> 
+
+
+<h3>Software, hardware</h3>
+All construction and retrieval done with <a href="http://en.wikipedia.org/wiki/Perl">Perl</a> scripts; Perl available free for all operating systems.
+Data stored with <a href="http://en.wikipedia.org/wiki/Berkeley_DB">BerkeleyDB</a> database library.
+System has run unmodified on Windows NT, Mac OSX, and Linux, all
+using <a href="http://en.wikipedia.org/wiki/Apache_HTTP_Server">Apache</a> webserver. The data, indexes, scripts, etc., for the ~2,000,000 records currently
+being displayed occupy ~2 GB. Refreshing the entire system from common format
+files requires ~15 minutes of processing time on a 2.6 GHz  Mac mini. 

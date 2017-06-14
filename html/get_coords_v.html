@@ -1,0 +1,279 @@
+<ihtml>
+<head>
+<title>
+Consortium of California Herbaria: Retrieve georeffed coords
+</title>
+<Meta Name="keywords" Content="UC Berkeley Herbarium,
+California floristics, Consortium of California Herbaria, UC Santa Barbara,
+UC Irvine, UC Riverside, UC Davis, UC Santa Cruz, Santa Barbara Botanic Garden,
+Jepson Herbarium
+">
+<link href="http://ucjeps.berkeley.edu/consortium/style_consortium.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+
+
+<!-- COMMON HEADER -->
+<?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/cch_header.php'); ?>
+<!-- COMMON HEADER ENDS -->
+
+
+<!-- <table class="banner" width="100%" border="0">
+<tr>
+<td align="center">Consortium of California Herbaria</td>
+</tr>
+<tr>
+<td class="bannerHerbs" align="center">
+<font  face="Times New Roman, Times, serif" color="#FEFEFE"><b>
+<a href="http://www.calacademy.org/research/botany/" target="_blank" class="bannerHerbs">
+CAS-DS</a> &middot; 
+<a href="http://cdfa.ca.gov/phpps/PPD/herbarium.html" target="_blank" class="bannerHerbs">
+CDA</a> &middot; 
+<a href="http://www.csuchico.edu/biol/Herb/" target="_blank" class="bannerHerbs">
+CHSC</a> &middot; 
+<a href="http://herbarium.ucdavis.edu/" target="_blank" class="bannerHerbs">
+DAV</a> &middot; 
+<a href="http://www.humboldt.edu/~herb/" target="_blank" class="bannerHerbs">
+HSC</a> &middot; 
+<a href="http://ucjeps.berkeley.edu/consortium/irvc.html" target="_blank" class="bannerHerbs">
+IRVC</a> &middot; 
+<a href="http://www.calpoly.edu/~bio/Herbarium.html" target="_blank" class="bannerHerbs">
+OBI</a> &middot;
+<a href="http://www.pgmuseum.org/" target="_blank" class="bannerHerbs">
+PGM</a> &middot;
+<a href="http://www.rsabg.org/" target="_blank" class="bannerHerbs">
+RSA-POM</a> &middot; 
+<a href="http://www.sbbg.org/" target="_blank" class="bannerHerbs">
+SBBG</a> &middot; 
+<a href="http://www.sdnhm.org/research/botany/" target="_blank" class="bannerHerbs">
+SD</a> &middot; 
+<a href="" target="_blank" class="bannerHerbs">
+SDSU</a> &middot; 
+<a href="http://www2.sjsu.edu/depts/herbarium/" target="_blank" class="bannerHerbs">
+SJSU</a>  &middot; 
+<a href="http://ucjeps.berkeley.edu/" target="_blank" class="bannerHerbs">
+UC-JEPS</a>  &middot; 
+<a href="http://www.herbarium.ucr.edu/" target="_blank" class="bannerHerbs">
+UCR</a> &middot; 
+<a href="http://www.lifesci.ucsb.edu/~mseweb/" target="_blank" class="bannerHerbs">
+UCSB</a> &middot; 
+<a href="http://mnhc.ucsc.edu/" target="_blank" class="bannerHerbs">
+UCSC</a> 
+</b></font>-->	  
+<!-- </td>
+</tr>
+</table>-->	
+<!-- Beginning of horizontal menu -->
+<table class=horizMenu width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="21" width="640" align="right">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://ucjeps.berkeley.edu/consortium/participants.html" class="horizMenuActive">
+Participants</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://ucjeps.berkeley.edu/consortium/news.html" class="horizMenuActive">News</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="horizMenuInactive">Search</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://ucjeps.berkeley.edu/consortium/about.html" class="horizMenuActive">About</a>
+</td>
+<td />
+</tr>
+<tr>
+<td colspan="6" bgcolor="#9FBFFF"><img src="http://ucjeps.berkeley.edu/common/images/common_spacer.gif" alt="" width="1" height="1" border="0" /></td>
+</tr>
+</table>
+<!-- End of horizontal menu -->
+
+<form method = "POST"
+action="http://ucjeps.berkeley.edu/cgi-bin/get_coords.pl">
+
+<center>
+<table cellspacing=10 width="66%" border=0>
+<tr><th colspan=4>Retrieve records with cloned coordinates. This retrieves "live" (i.e., editable) records.</th></tr>
+	<tr>
+<td>
+<a href="http://ucjeps.berkeley.edu/images/georef_map.html">
+<img src="http://ucjeps.berkeley.edu/images/dots.gif" alt="Georeferencing progress map (click for larger version)" width="300" height="300" border="0"></a>
+</td>
+
+<td valign="top" class="pageSubheading">County
+		<span class="bodySmallerText">(pick 1; default is all)</span>
+<br>
+		<select name="county" size = 24 >
+ 			<option value = "" selected="selected">All counties</option>
+ 			<option value = "ALAMEDA">Alameda</option>
+ 			<option value = "ALPINE">Alpine</option>
+ 			<option value = "AMADOR">Amador</option>
+ 			<option value = "BUTTE">Butte</option>
+ 			<option value = "CALAVERAS">Calaveras</option>
+ 			<option value = "COLUSA">Colusa</option>
+ 			<option value = "CONTRA COSTA">Contra Costa</option>
+			<option value = "DEL NORTE">Del Norte</option>
+			 <option value = "EL DORADO">El Dorado</option>
+			 <option value = "FRESNO">Fresno</option>
+			 <option value = "GLENN">Glenn</option>
+			 <option value = "HUMBOLDT">Humboldt</option>
+			 <option value = "IMPERIAL">Imperial</option>
+			 <option value = "INYO">Inyo</option>
+			 <option value = "KERN">Kern</option>
+			 <option value = "KINGS">Kings</option>
+			 <option value = "LAKE">Lake</option>
+			 <option value = "LASSEN">Lassen</option>
+			 <option value = "LOS ANGELES">Los Angeles</option>
+			 <option value = "MADERA">Madera</option>
+			 <option value = "MARIN">Marin</option>
+			 <option value = "MARIPOSA">Mariposa</option>
+			 <option value = "MENDOCINO">Mendocino</option>
+			 <option value = "MERCED">Merced</option>
+			 <option value = "MODOC">Modoc</option>
+			 <option value = "MONO">Mono</option>
+			 <option value = "MONTEREY">Monterey</option>
+			 <option value = "NAPA">Napa</option>
+			 <option value = "NEVADA">Nevada</option>
+			 <option value = "ORANGE">Orange</option>
+			 <option value = "PLACER">Placer</option>
+			 <option value = "PLUMAS">Plumas</option>
+			 <option value = "RIVERSIDE">Riverside</option>
+			 <option value = "SACRAMENTO">Sacramento</option>
+			 <option value = "SAN BENITO">San Benito</option>
+			 <option value = "SAN BERNARDINO">San Bernardino</option>
+			 <option value = "SAN DIEGO">San Diego</option>
+			 <option value = "SAN FRANCISCO">San Francisco</option>
+			 <option value = "SAN JOAQUIN">San Joaquin</option>
+			 <option value = "SAN LUIS OBISPO">San Luis Obispo</option>
+			 <option value = "SAN MATEO">San Mateo</option>
+			 <option value = "SANTA BARBARA">Santa Barbara</option>
+			 <option value = "SANTA CLARA">Santa Clara</option>
+			 <option value = "SANTA CRUZ">Santa Cruz</option>
+			 <option value = "SHASTA">Shasta</option>
+			 <option value = "SIERRA">Sierra</option>
+			 <option value = "SISKIYOU">Siskiyou</option>
+			 <option value = "SOLANO">Solano</option>
+			 <option value = "SONOMA">Sonoma</option>
+			 <option value = "STANISLAUS">Stanislaus</option>
+			 <option value = "SUTTER">Sutter</option>
+			 <option value = "TEHAMA">Tehama</option>
+			 <option value = "TRINITY">Trinity</option>
+			 <option value = "TULARE">Tulare</option>
+			 <option value = "TUOLUMNE">Tuolumne</option>
+			 <option value = "VENTURA">Ventura</option>
+			 <option value = "YOLO">Yolo</option>
+			 <option value = "YUBA">Yuba</option>
+			 <option value = "UNKNOWN">unknown</option>
+		</select>
+		</td>
+
+
+
+<td valign="top" class="pageSubheading">
+Record Source
+		<span class="bodySmallerText">(1 or more; default is all sources)</span>
+		<br>
+<SELECT NAME="inst" size=24 multiple>
+<OPTION VALUE="All" SELECTED>All sources</option>
+<OPTION VALUE="BLMAR">BLMAR (Bureau of Land Management, Arcata Field Office)</option>
+<OPTION VALUE="CAS">CAS (California Academy of Sciences)</option>
+<OPTION VALUE="DS">DS (Dudley Herbarium in CAS)</option>
+<OPTION VALUE="CATA">Catalina Island Conservancy</option>
+<OPTION VALUE="CDA">CDA (California Department of Food and Agriculture)</option>
+<OPTION VALUE="CHSC">CHSC (Chico State Herbarium, CSU Chico)</option>
+<OPTION VALUE="CLARK">CLARK (Riverside Metropolitan Museum)</option>
+<OPTION VALUE="CSUSB">CSUSB (California State University, San Bernardino)</option>
+<OPTION VALUE="GMDRC">GMDRC (Sweeney Granite Mountains Desert Research Center Herbarium)</option>
+<OPTION VALUE="FSC">FSC (Chico State Herbarium, CSU Fresno)</option>
+<OPTION VALUE="HUH">A, AMES, ECON, GH (Harvard University Herbaria)</option>
+<OPTION VALUE="HSC">HSC (Humboldt State University)</option>
+<OPTION VALUE="INF">INF (Inyo National Forest Herbarium, Bishop)</option>
+<OPTION VALUE="IRVC">IRVC (University of California, Irvine)</option>
+<OPTION VALUE="JEPS">JEPS (Jepson Herbarium, UC Berkeley)</option>
+<OPTION VALUE="UC">UC (University Herbarium, UC Berkeley)</option>
+<OPTION VALUE="JOTR">JOTR (Joshua Tree National Park)</option>
+<OPTION VALUE="JROH">JROH (Jasper Ridge Biological Preserve, Stanford University)</option>
+<OPTION VALUE="LOB">LOB (California State University, Long Beach)</option>
+<OPTION VALUE="MACF">MACF (Fay A. MacFadden Herbarium, CSU Fullerton)</option>
+<OPTION VALUE="NY">NY (New York Botanical Garden)</option>
+<OPTION VALUE="OBI">OBI (California Polytechnic State University, San Luis Obispo)</option>
+<OPTION VALUE="PASA">PASA (Pasadena City College Herbarium)</option>
+<OPTION VALUE="PGM">PGM (Pacific Grove Museum of Natural History)</option>
+<OPTION VALUE="POM">POM (Pomona Herbarium in RSA)</option>
+<OPTION VALUE="RSA">RSA (Rancho Santa Ana Botanic Garden Herbarium)</option>
+<OPTION VALUE="SACT">SACT (California State University, Sacramento)</option>
+<OPTION VALUE="SBBG">SBBG (Santa Barbara Botanic Garden)</option>
+<OPTION VALUE="SCFS">SCFS (Sagehen Creek Field Station Herbarium)</option>
+<OPTION VALUE="SD">SD (San Diego Natural History Museum)</option>
+<OPTION VALUE="SDSU">SDSU (San Diego State University)</option>
+<OPTION VALUE="SFV">SFV (California State University, Northridge)</option>
+<OPTION VALUE="SJSU">SJSU (Carl W. Sharsmith Herbarium)</option>
+<OPTION VALUE="UCD">UCD (University of California, Davis)</option>
+<OPTION VALUE="UCR">UCR (University of California, Riverside)</option>
+<OPTION VALUE="UCSB">UCSB (University of California, Santa Barbara)</option>
+<OPTION VALUE="UCSC">UCSC (University of California, Santa Cruz)</option>
+<OPTION VALUE="VVC">VVC (A. Louise Baartz Memorial Herbarium, Victor Valley College)</option>
+<OPTION VALUE="YM-YOSE">YM (Yosemite National Park)</option>
+
+</SELECT>	
+		</td>
+<td valign="top" class="pageSubheading">
+Restrictions
+		<table width="200" border="0" cellpadding="0" cellspacing="2">
+			<tr>
+				<td valign="top" class="pageSubheading">When<br><select name="scope" size=3>
+<option value = 0 SELECTED>Today
+<option value = 1>Last week
+<option value = 2>Forever
+<option value = 3>Before yesterday
+</select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			</tr>
+			<td class="pageSubheading">
+Who<br>
+<input type="checkbox" name="cc_IP" value="IP_restrict">This IP address
+<br />
+</td>
+</tr>
+			<tr>
+				<td valign="top" class="pageSubheading">
+Georeferencing group
+	<select name="scope_group" size=11>
+<option value = 0 SELECTED>Everyone
+<option value = 1>San Diego NHM
+<option value = 2>Rancho Santa Ana BG
+<option value = 3>UC Riverside
+<option value = 4>Santa Barbara BG
+<option value = 5>San Jose SU
+<option value = 6>UC Santa Cruz
+<option value = 7>UC Berkeley
+<option value = 8>Chico SU
+<option value = 9>Humboldt SU
+<option value = 10>UC Davis
+</select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			</tr>
+			<tr>
+<td>&nbsp;</td>
+			</tr>
+<tr><td valign="bottom">
+<input TYPE="submit" VALUE="Display cloned records" NAME="cc_display">
+<br />
+<input TYPE="submit" VALUE="Download cloned records" NAME="cc_download">
+</td>
+</tr>
+			</table>
+			</td>
+			</tr>
+			<tr>
+
+			</tr>
+			</table>
+<table width="100%">
+<tr class=banner>
+<td colspan="6" bgcolor="#9FBFFF"><img src="http://ucjeps.berkeley.edu/common/images/common_spacer.gif" alt="" width="1" height="1" border="0" /></td>
+</tr>
+</table>
+<!-- Begin footer -->
+<?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/cch_footer.php'); ?>
+<!-- End footer -->
+
+</body>
+</html>
