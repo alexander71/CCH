@@ -1,0 +1,80 @@
+<html>
+<head>
+<title>
+Comments scrutinizer
+</title>
+<Meta NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<Meta Name="keywords" Content="UC Berkeley Herbarium,
+California floristics, Consortium of California Herbaria, UC Santa Barbara,
+UC Irvine, UC Riverside, UC Davis, UC Santa Cruz, Santa Barbara Botanic Garden,
+Jepson Herbarium
+">
+</head>
+
+<body>
+
+<table width="50%" border=1 cellpadding=10>
+<tr><td>
+<h2 align ="center">CCH Comment Scrutinizer</h2>
+<h3>
+Choose one institution; if you want only comments that haven't been addressed, click the checkbox.
+<br>
+On the return page, records lacking an "Addressed comment?" button have already been addressed.
+</h3>
+<form action="/cgi-bin/address_cumu_comment.pl">
+<br>
+<SELECT NAME="inst" size=24 >
+<OPTION VALUE="BLMAR">BLMAR (BLM Arcata Field Office)</option>
+<OPTION VALUE="CATA">CATA (Catalina Island Conservancy)</option>
+<OPTION VALUE="CAS">CAS (California Academy of Sciences)</option>
+<OPTION VALUE="CDA">CDA (California Department of Food and Agriculture)</option>
+<OPTION VALUE="CHSC">CHSC (Chico State Herbarium, CSU Chico)</option>
+<OPTION VALUE="CLARK-A">CLARK (Riverside Metropolitan Museum)</option>
+<OPTION VALUE="CSUSB">CSUSB (Herbarium, CSU San Bernardino)</option>
+<OPTION VALUE="UCD">DAV (UC Davis)</option>
+<OPTION VALUE="DS">DS (Dudley Herbarium in CAS)</option>
+<OPTION VALUE="GMDRC">GMDRC (Sweeney Granite Mountains Research Center)</option>
+<OPTION VALUE="HSC">HSC (Humboldt State University Herbarium)</option>
+<OPTION VALUE="IRVC">IRVC (UC Irvine)</option>
+<OPTION VALUE="JEPS">JEPS (Jepson Herbarium, UC Berkeley)</option>
+<OPTION VALUE="JOTR">JOTR (Joshua Tree National Park Herbarium)</option>
+<OPTION VALUE="JROH">JROH (Jasper Ridge Biological Preserve)</option>
+<OPTION VALUE="LA">LA (UCLA Herbarium)</option>
+<OPTION VALUE="MACF">MACF (California State University, Fullerton)</option>
+<OPTION VALUE="OBI">OBI (California Polytechnic State University, SLO)</option>
+<OPTION VALUE="PASA">PASA (Pasadena City College)</option>
+<OPTION VALUE="PGM">PGM (Pacific Grove Museum of Natural History)</option>
+<OPTION VALUE="POM">POM (Pomona Herbarium in RSA)</option>
+<OPTION VALUE="RSA">RSA (Rancho Santa Ana Botanic Garden Herbarium)</option>
+<OPTION VALUE="SACT">SACT (California State University, Sacramento)</option>
+<OPTION VALUE="SBBG">SBBG (Santa Barbara Botanic Garden)</option>
+<OPTION VALUE="SCFS"> SCFS (Sagehen Creek Field Station)</option>
+<OPTION VALUE="SD">SD (San Diego Natural History Museum)</option>
+<OPTION VALUE="SDSU">SDSU (San Diego State University)</option>
+<OPTION VALUE="SFV">SFV (Cal State Northridge)</option>
+<OPTION VALUE="SJSU">SJSU (Carl W. Sharsmith Herbarium)</option>
+<OPTION VALUE="UC">UC (University Herbarium, UC Berkeley)</option>
+<OPTION VALUE="UCR">UCR (UC Riverside)</option>
+<OPTION VALUE="UCSB">UCSB (UC Santa Barbara)</option>
+<OPTION VALUE="UCSC">UCSC (UC Santa Cruz)</option>
+<OPTION VALUE="VVC">VVC (Victor Valley College)</option>
+<OPTION VALUE="YM-YOSE"> YM (Yosemite N.P Herbarium)</option>
+<OPTION VALUE="HUH">A, AMES, ECON, GH (Harvard University Herbaria)</option>
+<OPTION VALUE="NY">NY (New York Botanical Garden)</option>
+<OPTION VALUE="SEINET">SEINET (Southwest Environmental Information Network)</option>
+</SELECT>
+<br>
+<input type ="checkbox" name="addressed" value=1 > Only return records with unaddressed comments
+<br><br>
+<input type="radio" name="sort" value="oldest">Sort by oldest comments first (default)<br>
+<input type="radio" name="sort" value="newest">Newest comments first<br>
+<input type="radio" name="sort" value="bytaxon">Sort by taxon<br>
+
+<br>
+<input type ="submit" value="Retrieve the comments for the selected herbarium">
+<br>
+
+</form>
+</td></tr></table>
+</body>
+</html>

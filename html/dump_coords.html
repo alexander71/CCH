@@ -1,0 +1,113 @@
+<html>
+<head>
+<title>
+Consortium of California Herbaria: Retrieve georeffed coords
+</title>
+<Meta Name="keywords" Content="UC Berkeley Herbarium,
+California floristics, Consortium of California Herbaria, UC Santa Barbara,
+UC Irvine, UC Riverside, UC Davis, UC Santa Cruz, Santa Barbara Botanic Garden,
+Jepson Herbarium
+">
+<link href="http://ucjeps.berkeley.edu/consortium/style_consortium.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<!-- COMMON HEADER -->
+<?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/cch_header.php'); ?>
+<!-- COMMON HEADER ENDS -->
+
+<form method = "POST"
+action="http://ucjeps.berkeley.edu/cgi-bin/dump_coords.pl">
+
+<table cellspacing=10 width="36%" border=0>
+<tr><td colspan=4>
+<H2>
+Georeferencing results
+</H2>
+<UL>
+<LI>Retrieve records that have been received coordinates centrally through CCH georeferencing projects.
+<LI>Note, two counts are available at the end of the page, <OL><LI> total number of records georeferenced using the cloning interface and  <LI> total number of target taxa (for CCH-NSF grant) georeferenced using the cloning interface.
+</UL>
+</td></tr>
+
+<tr>
+<td>
+<a href="http://ucjeps.berkeley.edu/images/georef_map.html">
+<img src="http://ucjeps.berkeley.edu/images/dots.gif" alt="Georeferencing progress map (click for larger version)" width="300" height="300" border="0"></a>
+</td>
+
+
+<td valign="top" class="pageSubheading">
+Restrictions
+	<table width="200" border="0" cellpadding="0" cellspacing="2">
+	<tr>
+	<td valign="top" class="pageSubheading">Georeferenced when<br>
+	<select name="scope" size=7>
+		<option value = 5 SELECTED>Anytime
+		<option value = 4>Last 12 months
+		<option value = 3>Last 3 months
+		<option value = 2>Last 30 days
+		<option value = 1>Last 7 days
+		<option value = 0>Last 24 hours
+		<option value = 9>Today (since midnight)
+	</select>
+</td>
+</tr>
+			
+<tr>
+<td valign="top" class="pageSubheading">
+Georeferenced by
+	<select name="scope_group" size=11>
+		<option value = 0 SELECTED>Everyone
+		<option value = 1>San Diego NHM
+		<option value = 2>Rancho Santa Ana BG
+		<option value = 3>UC Riverside
+		<option value = 4>Santa Barbara BG
+		<option value = 5>San Jose SU
+		<option value = 6>UC Santa Cruz
+		<option value = 7>UC Berkeley
+		<option value = 8>Chico SU
+		<option value = 9>Humboldt SU
+		<option value = 10>UC Davis
+		<option value = 11>San Bernardino SU
+		<option value = 12>Cal Poly
+		<option value = 13>UC Santa Barbara
+	</select>
+</td>
+</tr>
+
+<tr>
+	<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="bottom">
+	<input TYPE="submit" VALUE="dump records" NAME="DUMP">
+	<input TYPE="submit" VALUE="print just the totals" NAME="DUMP">
+</td>
+</tr>
+</table>
+
+</td>
+<td valign='top'>
+<span class="pageSubheading2"><br><b>Herbarium</b> </span>
+        <SELECT NAME="inst" size=20>
+                <?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/cch_participants_options.php'); ?>
+        </SELECT> 
+
+</td>
+</tr>
+<tr>
+</tr>
+</table>
+
+</form>
+
+
+<!-- COMMON FOOTER -->
+<?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/cch_footer.php'); ?>
+<!-- COMMON FOOTER ENDS -->
+
+</body>
+</html>
