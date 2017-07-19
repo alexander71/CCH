@@ -10,6 +10,15 @@
 # output: HREC_georef.sql
 # Success. 1236 statements output
 
+my %georefhash = ("ArcGIS" => "urn:cspace:ucjeps.cspace.berkeley.edu:vocabularies:name(georefsource):item:name(ArcGIS1500490880038)''ArcGIS''",
+		"BerkeleyMapper" => "urn:cspace:ucjeps.cspace.berkeley.edu:vocabularies:name(georefsource):item:name(georefsource01)''BerkeleyMapper''",
+		"GPS" => "urn:cspace:ucjeps.cspace.berkeley.edu:vocabularies:name(georefsource):item:name(georefsource02)''GPS''",
+		"Coords from Gayle I. Hansen" => "urn:cspace:ucjeps.cspace.berkeley.edu:vocabularies:name(georefsource):item:name(georefsource03)''Coords from Gayle I. Hansen''",
+		"GEOLocate" => "urn:cspace:ucjeps.cspace.berkeley.edu:vocabularies:name(georefsource):item:name(georefsource04)''GEOLocate''",
+		"Google Earth" => "urn:cspace:ucjeps.cspace.berkeley.edu:vocabularies:name(georefsource):item:name(georefsource05)''Google Earth''",
+		"Terrain Navigator" => "urn:cspace:ucjeps.cspace.berkeley.edu:vocabularies:name(georefsource):item:name(georefsource06)''Terrain Navigator''",
+		"BioGeomancer" => "urn:cspace:ucjeps.cspace.berkeley.edu:vocabularies:name(georefsource):item:name(georefsource07)''BioGeomancer''",
+		"GoogleMaps via BerkeleyMapper" => "urn:cspace:ucjeps.cspace.berkeley.edu:vocabularies:name(georefsource):item:name(georefsource08)''GoogleMaps via BerkeleyMapper''");
 
 my $infile  = shift;
 my $outfile = shift;
@@ -46,7 +55,14 @@ Record: while(<IN>){
 #####Numeric fields, including decimallatitude and decimallongitude, must have the quotes left off
 
 ##### Keep these line(s) for future use (removed from the print OUT):
-# fieldlocverbatim = '$locality',
+  # fieldlocverbatim = '$locality',
+
+  if ($georefhash{$georef_source}) {
+    $georef_source = $georefhash{$georef_source};
+  }
+  else {
+    print "$georef_source NOT FOUND.\n";
+  }
 
   print OUT <<EOP;
 \\echo '$aid'
